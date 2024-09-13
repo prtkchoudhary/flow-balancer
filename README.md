@@ -24,14 +24,14 @@ The load balancer is designed to ensure efficient traffic management, ensuring t
 
 1. [Installation](#installation)
 2. [Setting Up Python Servers](#setting-up-python-servers)
-3. [Running Load Sphynx](#running-load-sphynx)
+3. [Running Flow Balancer](#running-flow-balancer)
 4. [Configuration](#configuration)
 5. [Contributing](#contributing)
 6. [License](#license)
 
 ## Installation
 
-To get started with **Load Sphynx**, follow these steps:
+To get started with **Flow Balancer**, follow these steps:
 
 ### Prerequisites
 
@@ -94,9 +94,9 @@ To confirm they are running, you can open a browser and go to:
 
 You should see a simple "Directory listing" page for each server.
 
-## Running Load Sphynx
+## Running Flow Balancer
 
-Once your servers are up and running, you can launch **Load Sphynx** and start distributing traffic.
+Once your servers are up and running, you can launch **Flow Balancer** and start distributing traffic.
 
 1. Open a new terminal window.
 2. Run the **flow-balancer** load balancer by executing the following command:
@@ -107,7 +107,7 @@ Once your servers are up and running, you can launch **Load Sphynx** and start d
 
 ### Default Configuration
 
-By default, **Load Sphynx** will distribute traffic across the servers on `localhost`:
+By default, **Flow Balancer** will distribute traffic across the servers on `localhost`:
 
 - http://localhost:8081
 - http://localhost:8082
@@ -129,7 +129,7 @@ This will send requests to the load balancer, which will distribute them across 
 
 ## Configuration
 
-You can configure **Load Sphynx** by editing the `config.yaml` file. This file allows you to:
+You can configure **Flow Balancer** by editing the `config.yaml` file. This file allows you to:
 
 - **Add or remove servers**: Specify the backend servers for load balancing.
 - **Change the load-balancing algorithm**: Choose between Round Robin, Weighted Round Robin, Least Connections, and Weighted Least Connections.
@@ -159,7 +159,7 @@ logging:
 After editing the configuration file, restart the load balancer for the changes to take effect:
 
 ```bash
-./load-sphynx
+./flow-balancer
 ```
 
 ## Contributing
