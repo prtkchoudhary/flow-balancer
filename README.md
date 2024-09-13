@@ -1,12 +1,10 @@
-Here’s a comprehensive and engaging README for your "Load Sphynx" load balancer project in Go, covering everything from the project overview to setting up servers and running the load balancer.
 
----
 
-# Load Sphynx - Scalable Load Balancer in Go
+# Flow Balancer - Scalable Load Balancer in Go
 
 ## Overview
 
-**Load Sphynx** is a high-performance, scalable load balancer built in **Go**, designed to distribute traffic across multiple servers using a variety of load-balancing algorithms. These algorithms include:
+**Flow Balancer** is a high-performance, scalable load balancer built in **Go**, designed to distribute traffic across multiple servers using a variety of load-balancing algorithms. These algorithms include:
 
 - **Round Robin**
 - **Weighted Round Robin**
@@ -56,10 +54,10 @@ Make sure you have Go installed. You can install Go from the official [Go Instal
 2. Build the Go project:
 
 ```bash
-go build -o load-sphynx main.go
+go build -o flow-balancer main.go
 ```
 
-This will generate the `load-sphynx` binary in the project directory.
+This will generate the `flow-balancer` binary in the project directory.
 
 ## Setting Up Python Servers
 
@@ -69,19 +67,19 @@ To test the load balancer, we'll set up five simple HTTP servers using Python's 
 
 ```bash
 # Server 1
-python3 -m http.server 8081 --bind 127.0.0.1
+python -m http.server 8081 --bind 127.0.0.1
 
 # Server 2
-python3 -m http.server 8082 --bind 127.0.0.1
+python -m http.server 8082 --bind 127.0.0.1
 
 # Server 3
-python3 -m http.server 8083 --bind 127.0.0.1
+python -m http.server 8083 --bind 127.0.0.1
 
 # Server 4
-python3 -m http.server 8084 --bind 127.0.0.1
+python -m http.server 8084 --bind 127.0.0.1
 
 # Server 5
-python3 -m http.server 8085 --bind 127.0.0.1
+python -m http.server 8085 --bind 127.0.0.1
 ```
 
 Each of these servers will be accessible locally on `localhost` with their respective ports. 
@@ -101,10 +99,10 @@ You should see a simple "Directory listing" page for each server.
 Once your servers are up and running, you can launch **Load Sphynx** and start distributing traffic.
 
 1. Open a new terminal window.
-2. Run the **Load Sphynx** load balancer by executing the following command:
+2. Run the **flow-balancer** load balancer by executing the following command:
 
 ```bash
-./load-sphynx
+./flow-balancer
 ```
 
 ### Default Configuration
@@ -166,7 +164,7 @@ After editing the configuration file, restart the load balancer for the changes 
 
 ## Contributing
 
-We welcome contributions! If you'd like to improve **Load Sphynx**, feel free to fork the repository and submit a pull request.
+We welcome contributions! If you'd like to improve **Flow Balancer**, feel free to fork the repository and submit a pull request.
 
 1. Fork the project
 2. Create your feature branch: `git checkout -b feature/your-feature`
